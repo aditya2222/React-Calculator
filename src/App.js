@@ -72,36 +72,37 @@ class App extends Component {
 		    <tr>
 		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="0" variant="contained" size="large" color="primary" className={classes.button}>0</Button></th>
 		      <td><Button onClick={(event)=> this.handleClick(event)} value="1" variant="contained" size="large" color="primary" className={classes.button}>1</Button></td>
-		      <td><Button onClick={(event)=> this.handleClick(event)} value="2" variant="contained" size="large" color="primary" className={classes.button}>2</Button></td>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="+" variant="contained" size="large" color="primary" className={classes.button}>+</Button></td>
 		    </tr>
 	    
 		    <tr>
-		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="3" variant="contained" size="large" color="primary" className={classes.button}>3</Button></th>
-		      <td><Button onClick={(event)=> this.handleClick(event)} value="4" variant="contained" size="large" color="primary" className={classes.button}>4</Button></td>
-		      <td><Button onClick={(event)=> this.handleClick(event)} value="5" variant="contained" size="large" color="primary" className={classes.button}>5</Button></td>
-		    </tr>
-
-		    <tr>
-		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="6" variant="contained" size="large" color="primary" className={classes.button}>6</Button></th>
-		      <td><Button onClick={(event)=> this.handleClick(event)} value="7" variant="contained" size="large" color="primary" className={classes.button}>7</Button></td>
-		      <td><Button onClick={(event)=> this.handleClick(event)} value="8" variant="contained" size="large" color="primary" className={classes.button}>8</Button></td>
-		    </tr>
-
-		    <tr>
-		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="9" variant="contained" size="large" color="primary" className={classes.button}>9</Button></th>
-		      <td><Button onClick={this.handleCalculation} value="=" variant="contained" size="large" color="primary" className={classes.button}>=</Button></td>
-		      <td><Button onClick={this.clearHandler} value="C" variant="contained" size="large" color="primary" className={classes.button}>C</Button></td>
-		    </tr>
-
-		    <tr>
-		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="+" variant="contained" size="large" color="primary" className={classes.button}>+</Button></th>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="2" variant="contained" size="large" color="primary" className={classes.button}>2</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="3" variant="contained" size="large" color="primary" className={classes.button}>3</Button></td>
 		      <td><Button onClick={(event)=> this.handleClick(event)} value="-" variant="contained" size="large" color="primary" className={classes.button}>-</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="4" variant="contained" size="large" color="primary" className={classes.button}>4</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="5" variant="contained" size="large" color="primary" className={classes.button}>5</Button></td>
 		      <td><Button onClick={(event)=> this.handleClick(event)} value="*" variant="contained" size="large" color="primary" className={classes.button}>*</Button></td>
 		    </tr>
 
 		    <tr>
-		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="/" variant="contained" size="large" color="primary" className={classes.button}>/</Button></th>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="6" variant="contained" size="large" color="primary" className={classes.button}>6</Button></th>
+		      <td><Button onClick={(event)=>this.handleClick(event)} value="7" variant="contained" size="large" color="primary" className={classes.button}>7</Button></td>
+		      <td><Button onClick={(event)=>this.handleClick(event)} value="/" variant="contained" size="large" color="primary" className={classes.button}>/</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="8" variant="contained" size="large" color="primary" className={classes.button}>8</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="9" variant="contained" size="large" color="primary" className={classes.button}>9</Button></td>
+		      <td><Button onClick={this.clearHandler} value="C" variant="contained" size="large" color="primary" className={classes.button}>C</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"></th>
 		      <td><Button onClick={(event)=> this.handleClick(event)} value="." variant="contained" size="large" color="primary" className={classes.button}>.</Button></td>
+		      <td><Button onClick={this.handleCalculation} value="=" variant="contained" size="large" color="primary" className={classes.button}>=</Button></td>
 		    </tr>
 		  </tbody>
 		</table>
