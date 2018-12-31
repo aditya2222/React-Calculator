@@ -25,10 +25,22 @@ class App extends Component {
 
 	handleCalculation = () => {
 	
+		try{
+		
+		
 		const operationString = this.state.inputValue
 		this.setState({
 			inputValue: [eval(operationString)]
 		})
+
+		}
+
+
+		catch(error){
+			
+			console.log('Invalid')
+		
+		}
 	}
 
 	clearHandler = () => {
@@ -46,107 +58,55 @@ class App extends Component {
 	  const classes = this.props
     return (
 
-      <div className="container" style={{marginLeft:'30%'}}>
+      <div className="container" style={{}}>
 		 <TextField
 			  id="standard-dense"
 			  label="Enter Number"
 	    		  value={this.state.inputValue}
 			  className={classes.textField}
 			  margin="dense"
-	    		  style={{width:'40%'}}
+	    		  style={{width:'100%'}}
 			/>
+		<table className="table">
+		  <tbody>
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="0" variant="contained" size="large" color="primary" className={classes.button}>0</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="1" variant="contained" size="large" color="primary" className={classes.button}>1</Button></td>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="2" variant="contained" size="large" color="primary" className={classes.button}>2</Button></td>
+		    </tr>
+	    
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="3" variant="contained" size="large" color="primary" className={classes.button}>3</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="4" variant="contained" size="large" color="primary" className={classes.button}>4</Button></td>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="5" variant="contained" size="large" color="primary" className={classes.button}>5</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="6" variant="contained" size="large" color="primary" className={classes.button}>6</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="7" variant="contained" size="large" color="primary" className={classes.button}>7</Button></td>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="8" variant="contained" size="large" color="primary" className={classes.button}>8</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="9" variant="contained" size="large" color="primary" className={classes.button}>9</Button></th>
+		      <td><Button onClick={this.handleCalculation} value="=" variant="contained" size="large" color="primary" className={classes.button}>=</Button></td>
+		      <td><Button onClick={this.clearHandler} value="C" variant="contained" size="large" color="primary" className={classes.button}>C</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="+" variant="contained" size="large" color="primary" className={classes.button}>+</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="-" variant="contained" size="large" color="primary" className={classes.button}>-</Button></td>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="*" variant="contained" size="large" color="primary" className={classes.button}>*</Button></td>
+		    </tr>
+
+		    <tr>
+		      <th scope="row"><Button onClick={(event)=> this.handleClick(event)} value="/" variant="contained" size="large" color="primary" className={classes.button}>/</Button></th>
+		      <td><Button onClick={(event)=> this.handleClick(event)} value="." variant="contained" size="large" color="primary" className={classes.button}>.</Button></td>
+		    </tr>
+		  </tbody>
+		</table>
+
        
-	    <div className="row"> 
-		    <div className="col-sm-2">	 
-
-			<Button onClick={(event)=> this.handleClick(event)} value="0" variant="contained" size="large" color="primary" className={classes.button}>0</Button>
-		    </div>
-	           
-		    <div className="col-sm-2">	 
-
-			<Button onClick={(event)=> this.handleClick(event)} value="1" variant="contained" size="large" color="primary" className={classes.button}>1</Button>
-		    </div>
-
-		    <div className="col-sm-2">	 
-	    
-			<Button onClick={(event)=> this.handleClick(event)} value="2" variant="contained" size="large" color="primary" className={classes.button}>2</Button>
-		    </div>
-
-
-	    </div>
-
-
-
-	    <div className="row"> 
-		    <div className="col-sm-2">	 
-
-			<Button onClick={(event)=> this.handleClick(event)} value="3" variant="contained" size="large" color="primary" className={classes.button}>3</Button>
-		    </div>
-	           
-		    <div className="col-sm-2">	 
-
-			<Button onClick={(event)=> this.handleClick(event)} value="4" variant="contained" size="large" color="primary" className={classes.button}>4</Button>
-		    </div>
-
-		    <div className="col-sm-2">	 
-	    
-			<Button onClick={(event)=> this.handleClick(event)} value="5" variant="contained" size="large" color="primary" className={classes.button}>5</Button>
-		    </div>
-
-
-	    </div>
-
-
-
-	    <div className="row"> 
-		    <div className="col-sm-2">	 
-
-			<Button onClick={(event)=> this.handleClick(event)} value="6" variant="contained" size="large" color="primary" className={classes.button}>6</Button>
-		    </div>
-	           
-		    <div className="col-sm-2">	 
-
-			<Button onClick={(event)=> this.handleClick(event)} value="7" variant="contained" size="large" color="primary" className={classes.button}>7</Button>
-		    </div>
-
-		    <div className="col-sm-2">	 
-	    
-			<Button onClick={(event)=> this.handleClick(event)} value="89" variant="contained" size="large" color="primary" className={classes.button}>8</Button>
-		    </div>
-
-
-	    </div>
-
-
-	    <div className="row"> 
-		    <div className="col-sm-2">	 
-			<Button onClick={(event)=> this.handleClick(event)} value="9" variant="contained" size="large" color="primary" className={classes.button}>9</Button>
-		    </div>
-	           
-		    <div className="col-sm-2">	 
-			<Button onClick={this.handleCalculation} variant="contained" size="large" color="primary" className={classes.button}>=</Button>
-		    </div>
-
-		    <div className="col-sm-2">	 
-			<Button onClick={this.clearHandler} value="C" variant="contained" size="large" color="primary" className={classes.button}>C</Button>
-		    </div>
-
-	    </div>
-
-	    <div className="row"> 
-		    <div className="col-sm-2">	 
-			<Button onClick={(event)=> this.handleClick(event)} value="+" variant="contained" size="large" color="primary" className={classes.button}>+</Button>
-		    </div>
-	           
-		    <div className="col-sm-2">	 
-			<Button onClick={(event)=> this.handleClick(event)} value="-" variant="contained" size="large" color="primary" className={classes.button}>-</Button>
-		    </div>
-
-		    <div className="col-sm-2">	 
-			<Button onClick={(event)=> this.handleClick(event)} value="*" variant="contained" size="large" color="primary" className={classes.button}>*</Button>
-		    </div>
-
-	    </div>
       </div>
     );
   }
